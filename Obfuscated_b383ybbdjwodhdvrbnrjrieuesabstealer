@@ -11,22 +11,18 @@ if game:GetService("Players").LocalPlayer then
     return
 end
 
-local Players = game:GetService("Players")
-local ReplicatedStorage = game:GetService("ReplicatedStorage")
-local LocalPlayer = Players.LocalPlayer
 
+local Players = game:GetService("Players")
+local ReplicatedStorage = game:GetService("RobloxReplicatedStorage")  -- Note: Usually just "ReplicatedStorage"
+
+local LocalPlayer = Players.LocalPlayer
 if not LocalPlayer then
-    return
+    Players:GetPropertyChangedSignal("LocalPlayer"):Wait()  -- Wait for LocalPlayer to load
+    LocalPlayer = Players.LocalPlayer
 end
 
 local serverType = ReplicatedStorage:WaitForChild("GetServerType", 10)
-if not serverType then
-    LocalPlayer:Kick("Rayz Hub requires a VIP/Private server\n(GetServerType not found)")
-    return
-end
-
-local serverTypeStr = serverType:InvokeServer()
-if not serverTypeStr or serverTypeStr ~= "VIPServer" then
+if serverType and serverType:InvokeServer() ~= "VIPServer" then
     LocalPlayer:Kick("Rayz Hub requires a VIP/Private server")
     return
 end
