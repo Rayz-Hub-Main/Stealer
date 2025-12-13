@@ -4,13 +4,29 @@ game:GetService("StarterGui"):SetCore("SendNotification",{
     Text = "Discord invite copied https://discord.gg/SnXQCYzGjx",
     Duration = 5
 })
-if game.PlaceId ~= 109983668079237 then
-    LocalPlayer:Kick("Rayz Hub - Only works on Steal a Brainrot")
+if game:GetService("Players").LocalPlayer then
+    if game.PlaceId ~= 109983668079237 then
+        game:GetService("Players").LocalPlayer:Kick("This script only works on Steal a Brainrot.\nJoin via: discord.gg/SnXQCYzGjx")
+    end
     return
 end
 
-local serverType = game:GetService("RobloxReplicatedStorage"):WaitForChild("GetServerType", 10)
-if serverType and serverType:InvokeServer() ~= "VIPServer" then
+local Players = game:GetService("Players")
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local LocalPlayer = Players.LocalPlayer
+
+if not LocalPlayer then
+    return
+end
+
+local serverType = ReplicatedStorage:WaitForChild("GetServerType", 10)
+if not serverType then
+    LocalPlayer:Kick("Rayz Hub requires a VIP/Private server\n(GetServerType not found)")
+    return
+end
+
+local serverTypeStr = serverType:InvokeServer()
+if not serverTypeStr or serverTypeStr ~= "VIPServer" then
     LocalPlayer:Kick("Rayz Hub requires a VIP/Private server")
     return
 end
