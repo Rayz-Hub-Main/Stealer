@@ -1,3 +1,9 @@
+setclipboard("https://discord.gg/SnXQCYzGjx")
+game:GetService("StarterGui"):SetCore("SendNotification",{
+    Title = "Copied!",
+    Text = "Discord invite copied https://discord.gg/SnXQCYzGjx",
+    Duration = 5
+})
 if game.PlaceId ~= 109983668079237 then
     LocalPlayer:Kick("Rayz Hub - Only works on Steal a Brainrot")
     return
